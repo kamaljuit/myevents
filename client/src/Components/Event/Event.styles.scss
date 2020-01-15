@@ -1,0 +1,36 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  .media {
+    // 16:9
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .tile-image {
+    height: 40%;
+    width: 30vw;
+  }
+
+  .ratings {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .section {
+      display: flex;
+      justify-content: space-around;
+
+      .quantity {
+        background-color: floralwhite;
+        min-width: 25px;
+        font-weight: bold;
+        align-self: center;
+        text-align: center;
+      }
+    }
+  }
+}

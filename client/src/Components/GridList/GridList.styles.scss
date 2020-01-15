@@ -1,0 +1,23 @@
+.grid-list-root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .element {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .url {
+      padding: 10px;
+      margin: 0 10px;
+    }
+
+    .text {
+      background: whitesmoke;
+      border-radius: 15px;
+      padding: 10px;
+      margin: 0 10px;
+    }
+  }
+}
