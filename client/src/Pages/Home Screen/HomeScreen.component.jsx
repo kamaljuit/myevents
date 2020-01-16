@@ -24,7 +24,13 @@ class Home extends React.Component {
         </div>
 
         <Container maxWidth="md">
-          <div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              flexWrap: "wrap"
+            }}
+          >
             <EventForm />
             <ExpansionPanel heading="See Your Events">
               <GridList data={this.props.selfEvents} />

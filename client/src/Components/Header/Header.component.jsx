@@ -46,27 +46,10 @@ function Header(props) {
             aria-label="open drawer"
           >
             <MenuIcon />
-            <span style={{ margin: "0px 10px" }}>GoTo</span>
+            <span style={{ margin: "0px 10px" }}>MyEvents</span>
           </IconButton>
           <div className={classes.grow} />
 
-          {/* {props.user ? (
-          
-            <div>
-              <IconButton
-                edge="start"
-                className={props.user.membership}
-                color="inherit"
-                aria-label="open drawer"
-              >
-                {props.user.membership === "free" ? (
-                  <span>Upgrade</span>
-                ) : (
-                  <span>{props.user.membership.toUpper()}</span>
-                )}
-              </IconButton>
-            </div>
-          ) : null} */}
           <IconButton
             edge="start"
             className={classes.menuButton}

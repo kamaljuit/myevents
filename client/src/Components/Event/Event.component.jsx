@@ -5,7 +5,7 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { red } from "@material-ui/core/colors";
-
+import { format } from "date-fns";
 const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 345
@@ -29,16 +29,30 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+function returnFormattedDate(string) {
+  const date = new Date(string);
+
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const year = date.getFullYear();
+  return `${day}/${month}/${year}`;
+}
+
 export default function EventCard(props) {
   const classes = useStyles();
   return (
     <Card className={classes.card}>
-      <CardHeader title={props.event.title} subheader={props.event.startDate} />
+      <CardHeader
+        title={props.event.title}
+        subheader={format(new Date(props.event.startDate), "MM/dd/yyyy")}
+      />
       <CardContent>
         <div>
           <p>
             <span>
-              From: {props.event.startTime} To: {props.event.endTime}
+              From: {format(new Date(props.event.startTime), "h 'o''clock'")}
+              <br />
+              To: {format(new Date(props.event.endTime), "h 'o''clock")}
             </span>
           </p>
         </div>

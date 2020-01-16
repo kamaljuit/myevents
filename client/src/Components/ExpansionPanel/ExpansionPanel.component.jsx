@@ -26,7 +26,6 @@ export default function Panel(props) {
 
   return (
     <div /*className={classes.root} */>
-      >
       <ExpansionPanel
         style={{
           backgroundColor: "#F4F4F4",

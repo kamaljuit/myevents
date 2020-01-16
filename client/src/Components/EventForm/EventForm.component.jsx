@@ -16,7 +16,8 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
-    border: "2px solid darkgrey"
+    border: "2px solid darkgrey",
+    margin: "10px"
   },
   margin: {
     margin: theme.spacing(1)
@@ -76,9 +77,11 @@ function EventForm(props) {
 
   return (
     <div className={classes.root}>
-      <div style={{ alignSelf: "center", margin: "auto" }}>Add Your Event</div>
+      <div style={{ margin: "5px 20px" }}>
+        <div style={{ alignSelf: "center", margin: "auto" }}>
+          Add Your Event
+        </div>
 
-      <div>
         <form
           onSubmit={onSubmit}
           style={{ display: "flex", flexDirection: "column" }}
